@@ -45,7 +45,8 @@ RUN echo "date.timezone=${PHP_TIMEZONE:-UTC}" > $PHP_INI_DIR/conf.d/date_timezon
 
 WORKDIR /tmp
 
-RUN curl -o https://phar.phpbu.de/phpbu.phar
+RUN curl -o /tmp/phpbu.phar https://phar.phpbu.de/phpbu.phar
+
 RUN mv /tmp/phpbu.phar /usr/local/bin/phpbu.phar && \
     ln -s /usr/local/bin/phpbu.phar /usr/local/bin/phpbu && \
 	chmod +x /usr/local/bin/phpbu
