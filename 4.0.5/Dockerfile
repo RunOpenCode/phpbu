@@ -25,6 +25,7 @@ RUN apt-get update && apt-get install -y \
         libbz2-dev \
         make \
         unzip \
+        bzip2 \
         libicu-dev \
         mysql-client
 
